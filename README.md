@@ -2,6 +2,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Code-Go-informational?style=flat-square&logo=go&color=00ADD8" alt="Go" />
+    <img src="https://img.shields.io/badge/Tools-Docker-informational?style=flat-square&logo=docker&color=2496ED" alt="Docker" />
 </p>
 
 ## 💬 About
@@ -11,10 +12,15 @@ This project was developed following Alura's [Go: Fundamentos de uma aplicação
 ## :computer: Technologies
 
 -   [Go](https://golang.org/)
+-   [Air](https://github.com/cosmtrek/air)
+-   [PostgreSQL](https://www.postgresql.org/)
+-   [Docker](https://www.docker.com/)
+-   [Docker Compose](https://docs.docker.com/compose/)
 
 ## :scroll: Requirements
 
--   [Go](https://golang.org/)
+-   [Docker](https://www.docker.com/)
+-   [Docker Compose](https://docs.docker.com/compose/)
 
 ## :cd: Installation
 
@@ -29,8 +35,10 @@ cd al-go-webapp-store
 ## :runner: Running
 
 ```sh
-...
+docker-compose up
 ```
+
+> Access http://localhost:8000/
 
 ## License
 
