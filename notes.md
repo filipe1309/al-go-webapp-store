@@ -15,3 +15,5 @@ psql -U postgres
 SELECT \* FROM products;
 
 https://semaphoreci.com/community/tutorials/how-to-deploy-a-go-web-application-with-docker
+https://github.com/cosmtrek/air
+https://medium.com/easyread/today-i-learned-golang-live-reload-for-development-using-docker-compose-air-ecc688ee076

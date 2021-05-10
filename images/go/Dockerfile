@@ -1,16 +1,11 @@
 FROM golang:1.16-alpine3.13
-# RUN go get -u github.com/beego/bee
+RUN apk update && apk upgrade && apk add curl git
 ENV GO111MODULE=on
 ENV GOFLAGS=-mod=vendor
-ENV APP_USER app
 ENV APP_HOME /go/src/go-webapp-store
-# RUN groupadd $APP_USER && useradd -m -g $APP_USER -l $APP_USER # FROM golang:1.16.3-buster
-RUN addgroup -S $APP_USER && adduser -S $APP_USER -G $APP_USER
-RUN mkdir -p $APP_HOME && chown -R $APP_USER:$APP_USER $APP_HOME
-USER $APP_USER
+RUN curl -fLo install.sh https://raw.githubusercontent.com/cosmtrek/air/master/install.sh \
+    && chmod +x install.sh && sh install.sh && cp ./bin/air /bin/air
 WORKDIR $APP_HOME
 EXPOSE 8000
-# CMD ["bee", "run"]
 COPY . .
-#RUN CGO_ENABLED=0 go build -o /go/bin/store
-ENTRYPOINT ["go", "run", "main.go"]
+CMD air
