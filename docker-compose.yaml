@@ -20,7 +20,7 @@ services:
             DB_SCHEMA: go_store
             DB_USER: postgres
             DB_PASSWORD: postgres
-            DB_HOST: localhost
+            DB_HOST: postgres
         depends_on:
             - postgres
         ports:
