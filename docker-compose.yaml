@@ -15,7 +15,7 @@ services:
 
     store:
         build:
-            context: ./images/go
+            context: ./.docker/go
         environment:
             DB_SCHEMA: go_store
             DB_USER: postgres
