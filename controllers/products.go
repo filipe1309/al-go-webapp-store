@@ -46,3 +46,7 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 	models.DeleteProduct(productId)
 	http.Redirect(w, r, "/", http.StatusMovedPermanently)
 }
+
+func Edit(w http.ResponseWriter, r *http.Request) {
+	templ.ExecuteTemplate(w, "Edit", nil)
+}
